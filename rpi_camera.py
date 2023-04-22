@@ -4,8 +4,6 @@ import imutils
 import time
 import numpy as np
 
-
-
 class RPiCamera(object):
 
     def __init__(self):
@@ -17,9 +15,6 @@ class RPiCamera(object):
 
     def get_frame(self):
         frame = self.stream.read()
-
         result, jpeg = cv2.imencode('.jpg', frame)
-
-
 
         return jpeg.tobytes()

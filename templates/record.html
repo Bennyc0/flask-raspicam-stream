@@ -13,10 +13,22 @@
             background-color: rgb(219, 163, 163);
             color:firebrick;
             }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 55%
+            }
     </style>
 </head>
 <body>
-    <a href="/record">Record</a>
-    <a href="/stream">Stream</a>
+    <h1>Livestream</h1>
+    <img src="{{ url_for('get_livestream') }}">
+
+    <a href="/start-recording">Start</a>
+    <a href="/stop-recording">Stop</a>
+    <a href="/">Home</a>
 </body>
+
 </html>
+
